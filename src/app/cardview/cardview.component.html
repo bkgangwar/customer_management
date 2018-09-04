@@ -1,0 +1,15 @@
+<div class="container card-view">
+    <h2 class="text-align-center">Customer Card</h2>
+    <div *ngFor="let emp of empData">
+        <div class="card col-sm-6 col-md-4 col-lg-4" [routerLink]="['./customer', emp.CustomerID]" routerLinkActive="active">
+               
+            <img class="CustomerImagePath" src="{{emp.CustomerImagePath}}" alt="John">
+            <h1>{{emp.FirstName}}&nbsp;{{emp.LastName}}</h1>
+            <p>{{emp.CustomerID}}</p>
+            <p>{{emp.Email}}</p>
+            <p>{{emp.PhoneNumber}}</p>
+            <p class="title">{{emp.DOJ}}</p>
+            <p>Harvard University</p>
+        </div>
+    </div>
+</div>

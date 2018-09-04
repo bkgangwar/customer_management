@@ -1,0 +1,78 @@
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Please fill the customer details:</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <div class="col-sm-12 col-md-6 col-lg-6" [ngClass]="displayFieldCss('FirstName')">
+              <label for="FirstName" class="control-label required">First Name</label>
+              <input type="text" id="FirstName" class="form-control" formControlName="FirstName">
+              <app-form-error [displayError]="isFieldValid('FirstName')" errorMsg="Please write your first name">
+              </app-form-error>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6" [ngClass]="displayFieldCss('LastName')">
+              <label for="LastName" class="control-label required">Last Name</label>
+              <input type="text" id="LastName" class="form-control" formControlName="LastName">
+              <app-form-error [displayError]="isFieldValid('LastName')" errorMsg="Please write your last name">
+              </app-form-error>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12 col-md-6 col-lg-6" [ngClass]="displayFieldCss('email')">
+              <label for="email" class="control-label required">Email</label>
+              <input type="text" id="email" class="form-control" formControlName="email">
+              <app-form-error [displayError]="isFieldValid('email')" errorMsg="Please inform your email">
+              </app-form-error>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6" [ngClass]="displayFieldCss('PhoneNumber')">
+              <label for="PhoneNumber" class="control-label required">Phone Number</label>
+              <input type="text" id="PhoneNumber" class="form-control" formControlName="PhoneNumber">
+              <app-form-error [displayError]="isFieldValid('PhoneNumber')" errorMsg="Please inform your PhoneNumber">
+              </app-form-error>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12 col-md-6 col-lg-6" [ngClass]="displayFieldCss('CompanyName')">
+              <label for="CompanyName" class="control-label required">Current Company Name</label>
+              <input type="text" id="CompanyName" class="form-control" formControlName="CompanyName">
+              <app-form-error [displayError]="isFieldValid('CompanyName')" errorMsg="Please inform your current company name">
+              </app-form-error>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6" [ngClass]="displayFieldCss('ExpInYears')">
+              <label for="ExpInYears" class="control-label required">Experience (In Years)</label>
+              <input type="number" id="ExpInYears" class="form-control" formControlName="ExpInYears">
+              <app-form-error [displayError]="isFieldValid('ExpInYears')" errorMsg="Please inform your years of Experience">
+              </app-form-error>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12 col-md-6 col-lg-6" [ngClass]="displayFieldCss('Designation')">
+              <label for="Designation" class="control-label required">Designation</label>
+              <input type="text" id="Designation" class="form-control" formControlName="Designation">
+              <app-form-error [displayError]="isFieldValid('Designation')" errorMsg="Please inform your designation">
+              </app-form-error>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6" [ngClass]="displayFieldCss('DOJ')">
+              <label for="DOJ" class="control-label required">Date of Joining</label>
+              <input type="number" id="DOJ" class="form-control" formControlName="DOJ">
+              <app-form-error [displayError]="isFieldValid('DOJ')" errorMsg="Please inform your date of joining">
+              </app-form-error>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+            <button class="btn" (click)="reset()">Reset</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

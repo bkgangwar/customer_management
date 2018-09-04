@@ -1,0 +1,53 @@
+<div class="container edit-details">
+    <a class="back-link" [routerLink]="['']" routerLinkActive="active">Back</a>
+    <h2 class="text-align-center">Edit the Details:</h2>
+    <h3 class="text-align-center">Customer ID: {{ empData.CustomerID }}</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="FirstName">First Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="FirstName" placeholder="{{empData.FirstName}}" name="FirstName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="LastName">Last Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="LastName" placeholder="{{empData.LastName}}" name="LastName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="{{empData.Email}}" name="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="PhoneNumber">Phone Number:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="PhoneNumber" placeholder="{{empData.PhoneNumber}}" name="PhoneNumber">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" (click)="updateProfileData()">update profile</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<div class="container">
+    <h2 class="text-align-center">Experience: </h2>
+    <table class="table" border="1" id="t01">
+        <tr>
+            <th>Company Name</th>
+            <th>Exp. in Years</th>
+        </tr>
+        <tr *ngFor="let exp of empData.ExperienceRecords">
+            <td>{{exp.CompanyName}}</td>
+            <td>{{exp.ExpInYears}}</td>
+        </tr>
+    </table>
+
+    <a class="back-link" [routerLink]="['']" routerLinkActive="active">Back</a>
+</div>

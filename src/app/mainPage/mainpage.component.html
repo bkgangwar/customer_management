@@ -1,0 +1,47 @@
+<!-- <table class="table" border="1" style="border-collapse:collapse"  id="t01">
+    <tr>
+        <th>CustomerID</th>
+        <th>Full Name</th>
+        <th>DOJ</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let emp of empData">
+        <td>{{emp.CustomerID}}</td>
+        <td>{{emp.FirstName}}&nbsp;{{emp.LastName}}</td>
+        <td>{{emp.DOJ}}</td>
+        <td><a  [routerLink]="['./customer', emp.CustomerID]" routerLinkActive="active">View Details</a></td>
+    </tr>
+</table> -->
+
+
+<div class="container">
+
+    <!-- <div class="text-align-center">
+        <p>Click on a button to choose list view or Card view.</p>
+        <button class="btn" (click)="listView()"><i class="fa fa-bars"></i> List View</button>
+        <button class="btn active" (click)="gridView()"><i class="fa fa-th-large"></i> Card View</button>
+    </div> -->
+    <!-- <button class="btn btn-primary" (click)="addCustomers()">Add Customers</button> -->
+ 
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add Customers</button>
+    <app-add-customers></app-add-customers>
+
+    <ul class="nav nav-tabs">
+        <h2 class="list-heading">Customer List: </h2>
+        <p class="simpos" [innerText]="seeListCardView"></p>
+        <li class="active"><a data-toggle="tab" href="#home">List View</a></li>
+        <li><a data-toggle="tab" href="#menu1">Card View</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <ul class="list-group" *ngFor="let emp of empData">
+                <li class="list-group-item list-group-item-action list-view" [routerLink]="['./customer', emp.CustomerID]" routerLinkActive="active">{{emp.FirstName}}&nbsp;{{emp.LastName}}</li>
+            </ul>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <card-view></card-view>
+        </div>
+    </div>
+
+</div>
