@@ -37,7 +37,7 @@ export class EmpService{
         DOJ: "12/05/2017",
         ExperienceRecords: [
           {
-            CompanyName: "RObert Bosch",
+            CompanyName: "Robert Bosch",
             ExpInYears: 5
           },
           {
@@ -109,9 +109,9 @@ export class EmpService{
       },
       {
         CustomerID:"ABC1006",
-        FirstName: "Sonal",
-        LastName: "Katiyar",
-        Email: "sonalkat@gmail.com",
+        FirstName: "Poonam",
+        LastName: "Bharti",
+        Email: "poonambharti@gmail.com",
         PhoneNumber: "7877733737",
         CustomerImagePath:"./assets/images/customer_photos/6.jpg",
         DOJ: "12/02/2017",
@@ -125,7 +125,7 @@ export class EmpService{
             ExpInYears: 3
           }
         ],
-        Designation: "Software Developer" 
+        Designation: "CA" 
       },
        {
         CustomerID:"ABC1007",
